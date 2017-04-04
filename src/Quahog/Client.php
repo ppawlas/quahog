@@ -37,9 +37,6 @@ class Client
         $this->_mode = $mode;
         $this->_socket = $socket;
         $this->_timeout = $timeout;
-        if ($mode === PHP_BINARY_READ) {
-            trigger_error("Using binary read is deprecated and will be removed in a future release. Explicitly set $mode to PHP_NORMAL_READ to avoid this message.", E_USER_DEPRECATED);
-        }
     }
 
     /**
